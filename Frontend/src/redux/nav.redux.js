@@ -4,7 +4,7 @@ import {createSlice} from '@reduxjs/toolkit'
 const navSlice = createSlice({
     name:'activeNav',
     initialState:{
-        value:'Home',
+        value:'home',
     },
     reducers:{
         setActive:(state,action)=>{
