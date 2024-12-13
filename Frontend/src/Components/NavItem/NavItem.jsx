@@ -8,19 +8,17 @@ function NavItem({item}) {
   const active = useSelector(state=>state?.activeNav?.value);
   const dispatch = useDispatch();
   const location = useLocation();
-  console.log('hello',active)
 
   useEffect(() => {
     // Get the active route name from the current location
-    const currentPath = location.pathname.split('/')[1] || 'home'; // Default to 'home' if no path
+    const currentPath = location.pathname.split('/')[1] || ''; // Default to 'home' if no path
+    console.log('current',currentPath);
     dispatch(setActive(currentPath));
   }, [dispatch, location]);
 
   const handleClick = (e)=>{
     // e.preventDefault();
-    console.log('before',item.name)
-    dispatch(setActive(item.to || 'home'))
-    console.log('after')
+    dispatch(setActive(item.to || ''))
   }
 
   return (

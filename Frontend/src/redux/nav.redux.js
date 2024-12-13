@@ -4,11 +4,12 @@ import {createSlice} from '@reduxjs/toolkit'
 const navSlice = createSlice({
     name:'activeNav',
     initialState:{
-        value:'home',
+        value:'',
     },
     reducers:{
         setActive:(state,action)=>{
             // console.log('hello')
+            console.log(action.payload)
             state.value = action.payload
         },
     },
