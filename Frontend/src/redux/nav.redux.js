@@ -4,7 +4,7 @@ import {createSlice} from '@reduxjs/toolkit'
 const navSlice = createSlice({
     name:'activeNav',
     initialState:{
-        value:'home',
+        value:'',
     },
     reducers:{
         setActive:(state,action)=>{
@@ -14,7 +14,20 @@ const navSlice = createSlice({
     },
 })
 
-export const {setActive} = navSlice.actions
+const togleSlice = createSlice({
+    name:'togle',
+    initialState:{
+        togle:false,
+    },
+    reducers:{
+        togleNav:state=>{
+            state.togle=!state.togle;
+        }
+    }
+})
 
+export const {setActive} = navSlice.actions
+export const {togleNav} = togleSlice.actions
 
 export const navReducer = navSlice.reducer;
+export const togle = togleSlice.reducer;
