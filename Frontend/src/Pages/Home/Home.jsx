@@ -16,7 +16,7 @@ function Home() {
       <div className="w-full container mt-20 px-4 lg:px-20 flex flex-col items-center m-auto">
         <div className="flex flex-col mt-24 lg:flex-row gap-10 w-full max-w-screen-xl items-center m-auto">
           {/* Text Section */}
-          <div className="lg:w-1/2 flex flex-col">
+          <div className="lg:w-1/2 flex flex-col items-center lg:items-start">
             <p className="text-3xl font-bold leading-snug">
               A.E. Association Department:- <span className="text-blue-700">{text}</span><Cursor/>
               <br /> For Developing Roads and Dams in Gujarat

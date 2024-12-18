@@ -9,13 +9,25 @@ const navSlice = createSlice({
     reducers:{
         setActive:(state,action)=>{
             // console.log('hello')
-            console.log(action.payload)
             state.value = action.payload
         },
     },
 })
 
-export const {setActive} = navSlice.actions
+const togleSlice = createSlice({
+    name:'togle',
+    initialState:{
+        togle:false,
+    },
+    reducers:{
+        togleNav:state=>{
+            state.togle=!state.togle;
+        }
+    }
+})
 
+export const {setActive} = navSlice.actions
+export const {togleNav} = togleSlice.actions
 
 export const navReducer = navSlice.reducer;
+export const togle = togleSlice.reducer;
